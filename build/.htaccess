@@ -4,10 +4,8 @@ DirectoryIndex public/index.php
 RewriteEngine On
 RewriteBase /
 
-# Eğer /login gibi bir URL gelirse, bu isteği index.php?url=login'e yönlendir
-# RewriteRule ^login$ public/index.php?url=login [QSA,L]
 
-# Diğer tüm istekleri index.php?url=... şeklinde işle
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]

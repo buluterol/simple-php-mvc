@@ -9,5 +9,5 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./odev:/var/www/html
+      - ./build:/var/www/html
       - ./apache/demo.apache.conf:/etc/apache2/sites-enabled/demo.conf
